@@ -7,7 +7,7 @@ class VectorStoreManager:
         self.persist_dir=persist_dir
         self.collection=None
         self.client=None
-        self.initialize_store()
+        self._initialize_store()
     def _initialize_store(self):
         os.makedirs(self.persist_dir,exist_ok=True)
         #create a client
