@@ -5,3 +5,7 @@ class EmbeddingManager:
         print("loading model...",model_name)
         self.model=SentenceTransformer(self.model_name)
         print("dimension model...",self.model.get_sentence_embedding_dimension())
+        
+    def generate_embeddings(self,text):
+        embeddings=self.model.encode(text)
+        return embeddings
